@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ne">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Be My Valentine? 💌🌹</title>
+  <title>मेरो भ्यालेन्टाइन बन्छौ? 💌🌹</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:ital,wght@1,600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:ital,wght@1,600&family=Mukta:wght@400;600;800&display=swap');
 
     * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
 
@@ -13,7 +13,7 @@
       width: 100vw;
       height: 100vh;
       background: radial-gradient(circle at center, #1a0b14 0%, #080306 100%);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Mukta', 'Montserrat', sans-serif;
       color: #fff;
       overflow: hidden;
       display: flex;
@@ -60,15 +60,15 @@
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
+      font-family: 'Playfair Display', 'Mukta', serif;
+      font-size: 2.2rem;
       color: #ff477e;
       margin-bottom: 15px;
       text-shadow: 0 0 20px rgba(255, 71, 126, 0.4);
     }
 
     p {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       line-height: 1.7;
       color: #e6d7df;
       margin-bottom: 22px;
@@ -81,7 +81,7 @@
       padding: 14px 32px;
       border-radius: 30px;
       font-weight: 700;
-      font-size: 0.98rem;
+      font-size: 1rem;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
       box-shadow: 0 5px 25px rgba(255, 71, 126, 0.5);
@@ -115,7 +115,7 @@
       border-radius: 18px;
       cursor: pointer;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #fff;
       transition: all 0.2s;
     }
@@ -145,10 +145,10 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 10px;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
-    /* Screen 4: The Ultimate Catch / No-Escape Proposal */
+    /* Screen 4: Proposal Area */
     .proposal-box {
       position: relative;
       width: 100%;
@@ -170,10 +170,11 @@
 
     #yes-btn {
       position: absolute;
-      left: 20%;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    /* Final Epic Love Letter Container */
+    /* Final Love Letter Container */
     .novel-container {
       background: rgba(20, 8, 15, 0.95);
       backdrop-filter: blur(20px);
@@ -188,20 +189,20 @@
 
     .novel-container h1 {
       text-align: center;
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 20px;
     }
 
     .novel-container p {
       color: #f2e6ec;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       margin-bottom: 20px;
       line-height: 1.8;
     }
 
     .novel-container .highlight-quote {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
+      font-family: 'Playfair Display', 'Mukta', serif;
+      font-size: 1.3rem;
       color: #ff70a6;
       text-align: center;
       font-style: italic;
@@ -217,60 +218,60 @@
     
     <!-- Screen 1: Romantic Hook -->
     <div class="screen active" id="scr-1">
-      <h1>Hey You... 💌🌹</h1>
-      <p>I could just send a boring text, but you deserve something infinitely better. Before unlocking the real question, let's verify your romantic compatibility.</p>
-      <button class="btn" onclick="nextScr(2)">Let's check ✨</button>
+      <h1>सुनो न... 💌🌹</h1>
+      <p>सामान्य म्यासेज त जसले नि पठाउँछ, तर तिमी मेरो लागि धेरै खास छौ। साँचो कुरा सोध्नु अघि, आऊ हाम्रो रोमान्टिक जोडी कत्तिको मिल्छ चेक गरौँ!</p>
+      <button class="btn" onclick="nextScr(2)">चेक गरौँ न त ✨</button>
     </div>
 
     <!-- Screen 2: Vibe Check -->
     <div class="screen" id="scr-2">
-      <h1>Phase 1: Chemistry Analysis 🍷✨</h1>
-      <p>Select what makes our dynamic completely unmatched:</p>
+      <h1>चरण १: केमिस्ट्री चेक 🍷✨</h1>
+      <p>हाम्रो जोडीलाई सबैभन्दा खास र विशेष के कुराले बनाउँछ?</p>
       <div class="vibe-grid">
-        <div class="vibe-opt" onclick="selectVibe(this)">☕ Endless Late-Night Talks</div>
-        <div class="vibe-opt" onclick="selectVibe(this)">👑 Main Character Energy Together</div>
-        <div class="vibe-opt" onclick="selectVibe(this)">🥺 Unfiltered Comfort & Laughs</div>
-        <div class="vibe-opt" onclick="selectVibe(this)">🔥 Absolute Unbothered Chaos</div>
+        <div class="vibe-opt" onclick="selectVibe(this)">☕ अबेर रातिसम्मका लामा गफगाफ</div>
+        <div class="vibe-opt" onclick="selectVibe(this)">👑 सँगै हुँदा फिल्मको मुख्य जोडी जस्तै फिल हुनु</div>
+        <div class="vibe-opt" onclick="selectVibe(this)">🥺 पूर्ण भरोसा र रमाइलो हाँसो</div>
+        <div class="vibe-opt" onclick="selectVibe(this)">🔥 एकदमै बबाल र रमाइलो जुगलबन्दी</div>
       </div>
-      <button class="btn" id="vibe-next-btn" style="display:none;" onclick="nextScr(3)">Proceed to Heart Sync 💖</button>
+      <button class="btn" id="vibe-next-btn" style="display:none;" onclick="nextScr(3)">अब धड्कन मिलाऊँ 💖</button>
     </div>
 
     <!-- Screen 3: Heartbeat Sync Mini-Game -->
     <div class="screen" id="scr-3">
-      <h1>Phase 2: Heartbeat Sync ❤️‍🔥</h1>
-      <p>Tap the pulse button 5 times to completely sync our frequencies before the final question.</p>
+      <h1>चरण २: धड्कनको तालमेल ❤️‍🔥</h1>
+      <p>अन्तिम प्रश्न सोध्नु अघि, हाम्रो धड्कन एउटै बनाउन यो बटनमा ५ पटक थिच।</p>
       <div class="game-box">
-        <p style="margin-bottom: 8px;">Sync Level: <strong id="heart-score">0</strong> / 5</p>
-        <button class="heart-tap-btn" id="heart-tap-btn" onclick="handleHeartSync()">Sync Pulse 💓</button>
+        <p style="margin-bottom: 8px;">तालमेल स्तर: <strong id="heart-score">0</strong> / 5</p>
+        <button class="heart-tap-btn" id="heart-tap-btn" onclick="handleHeartSync()">धड्कन मिलाऊ 💓</button>
       </div>
-      <button class="btn" id="final-step-btn" style="display:none;" onclick="nextScr(4)">Unlock The Question 🌹</button>
+      <button class="btn" id="final-step-btn" style="display:none;" onclick="nextScr(4)">प्रश्न हेरौँ 🌹</button>
     </div>
 
-    <!-- Screen 4: The Ultimate Valentine Proposal (Unescapable 'No') -->
+    <!-- Screen 4: The Ultimate Valentine Proposal -->
     <div class="screen" id="scr-4">
-      <h1>Will You Be My Valentine? 💍💘</h1>
-      <p id="proposal-text">There is literally only one correct answer to this question. Choose wisely!</p>
+      <h1>के तिमी मेरो भ्यालेन्टाइन बन्छौ? 💍💘</h1>
+      <p id="proposal-text">यो प्रश्नको एउटा मात्र सही उत्तर छ। विचार गरेर छनोट गर है!</p>
       <div class="proposal-box" id="proposal-area">
-        <button class="btn" id="yes-btn" onclick="nextScr(5)">YES! Absolutely 💖</button>
-        <button class="btn" id="no-btn" onmouseover="moveNoBtn()" onclick="moveNoBtn()">No 🙄</button>
+        <button class="btn" id="yes-btn" onclick="nextScr(5)">हुन्छ! पक्कै पनि 💖</button>
+        <button class="btn" id="no-btn" onmouseover="moveNoBtn()" ontouchstart="moveNoBtn()" onclick="moveNoBtn()">हुन्न 🙄</button>
       </div>
     </div>
 
-    <!-- Screen 5: The Deep, Emotional Love Letter Novel Finale -->
+    <!-- Screen 5: Love Letter Finale -->
     <div class="screen" id="scr-5">
       <div class="novel-container">
-        <h1>YOU ARE MY FOREVER VALENTINE. 🥂✨</h1>
-        <p>If you made it through all the interactive nonsense, mini-games, and button-chasing just to read this, thank you. You mean more to me than words can ever neatly wrap up.</p>
+        <h1>तिमी सधैँका लागि मेरो भ्यालेन्टाइन हौ। 🥂✨</h1>
+        <p>यी सबै गेमहरू खेलेर र बटनहरू पछ्याएर यहाँसम्म आइपुगेकोमा धेरै धेरै धन्यवाद। मेरो जीवनमा तिम्रो महत्त्व कति छ भनेर म शब्दमा व्यक्त नै गर्न सक्दिनँ।</p>
         
-        <p>Let’s be completely honest—life gets loud, chaotic, and exhausting. But the moment you're around, everything shifts. You have this incredible warmth, a stunning heart, and an energy that makes every ordinary day feel like an absolute movie.</p>
+        <p>साँचो भन्नुपर्दा—जिन्दगी कहिलेकाहीँ एकदमै गाह्रो र अत्ताउने खालको हुन्छ। तर तिमी साथमा हुँदा सबै कुरा सजिलो र सुन्दर लाग्छ। तिम्रो माया, तिम्रो मुस्कान र तिम्रो उपस्थितिले मेरो हरेक साधारण दिनलाई एकदमै खास बनाइदिन्छ।</p>
         
-        <div class="highlight-quote">"Out of all the paths and all the people in this world, my favorite place is right next to you."</div>
+        <div class="highlight-quote">"संसारका हजारौँ बाटा र मान्छेहरूमध्ये, मेरो सबैभन्दा प्रिय ठाउँ तिम्रो ओझेल हो।"</div>
 
-        <p>Thank you for being my safe space, my favorite person to annoy, and the brightest part of my life. I promise to keep bringing you your favorite treats, listening to your stories, and making you feel cherished not just today, but every single day of the year.</p>
+        <p>मेरो सुरक्षित ठाउँ बनेकोमा, मलाई जिस्क्याउने र मेरो जीवनको सबैभन्दा उज्यालो हिस्सा बनेकोमा धन्यवाद। म तिमीलाई सधैँ यसरी नै माया गरिरहनेछु र हरेक दिन खास बनाउने प्रयास गर्नेछु।</p>
 
-        <p>Here's to us, to endless memories, and to a lifetime of celebrating this bond. Let's make this Valentine's unforgettable! 💕🌹</p>
+        <p>हाम्रो सुन्दर साथ र अनगिन्ती सम्झनाहरूको नाममा! आऊ यो भ्यालेन्टाइनलाई सधैँका लागि अविष्मरणीय बनाऔँ! 💕🌹</p>
 
-        <button class="btn" onclick="restartSite()" style="margin-top: 15px; width: 100%;">Replay Experience 🔄</button>
+        <button class="btn" onclick="restartSite()" style="margin-top: 15px; width: 100%;">पुनः सुरु गरौँ 🔄</button>
       </div>
     </div>
 
@@ -292,7 +293,7 @@
       document.getElementById('vibe-next-btn').style.display = 'none';
       document.getElementById('final-step-btn').style.display = 'none';
       document.getElementById('heart-score').innerText = "0";
-      document.getElementById('heart-tap-btn').innerText = "Sync Pulse 💓";
+      document.getElementById('heart-tap-btn').innerText = "धड्कन मिलाऊ 💓";
       document.getElementById('heart-tap-btn').style.background = "#ff477e";
       document.querySelectorAll('.vibe-opt').forEach(el => el.classList.remove('selected'));
       
@@ -325,21 +326,21 @@
       burstConfetti();
       if(heartCount >= 5) {
         const btn = document.getElementById('heart-tap-btn');
-        btn.innerText = "Synchronized Perfectly! 💘";
+        btn.innerText = "धड्कन पूर्ण रूपमा मिल्यो! 💘";
         btn.style.background = "#2ed573";
         document.getElementById('final-step-btn').style.display = 'inline-block';
       } else {
         const btn = document.getElementById('heart-tap-btn');
-        btn.innerText = `Synced! Tap ${5 - heartCount} more times! ✨`;
+        btn.innerText = `मिल्यो! अझै ${5 - heartCount} पटक थिच! ✨`;
       }
     }
 
-    // Unescapable 'No' Button Logic
+    // Evasive 'No' Button Logic
     const noTaunts = [
-      "Nice try! That button doesn't work 😌",
-      "Wrong choice bestie, try the other one 💕",
-      "Nope, error 404: 'No' not found 🤭",
-      "You're only making me chase you! Click Yes ❤️"
+      "राम्रो प्रयास! तर यो बटनले काम गर्दैन 😌",
+      "गलत छनोट भयो नि, अर्को थिच न 💕",
+      "अहँ, 'हुन्न' भन्ने विकल्प नै छैन 🤭",
+      "तिमीले जति भागे पनि 'हुन्छ' नै भन्नुपर्छ ❤️"
     ];
     let tauntIdx = 0;
     function moveNoBtn() {
@@ -358,7 +359,7 @@
       tauntIdx++;
     }
 
-    // Romantic Heart & Confetti Engine
+    // Canvas Particle System
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
     let particles = [];
