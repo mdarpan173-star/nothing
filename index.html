@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>मेरो भ्यालेन्टाइन बन्छौ? 💌🌹</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:ital,wght@1,600&family=Mukta:wght@400;600;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Mukta:wght@400;600;800&display=swap');
 
     * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
 
@@ -60,7 +60,6 @@
     }
 
     h1 {
-      font-family: 'Playfair Display', 'Mukta', serif;
       font-size: 2.2rem;
       color: #ff477e;
       margin-bottom: 15px;
@@ -93,14 +92,6 @@
       box-shadow: 0 8px 30px rgba(255, 71, 126, 0.7);
     }
 
-    .btn-secondary {
-      background: transparent;
-      border: 2px solid #ff477e;
-      color: #ff70a6;
-      box-shadow: none;
-    }
-
-    /* Screen 2: Interactive Vibe Check */
     .vibe-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -127,7 +118,6 @@
       transform: scale(1.03);
     }
 
-    /* Screen 3: Heart Puzzle / Tap Game */
     .game-box {
       background: rgba(30, 12, 22, 0.7);
       border: 2px dashed rgba(255, 71, 126, 0.4);
@@ -148,7 +138,6 @@
       font-size: 1.05rem;
     }
 
-    /* Screen 4: Proposal Area */
     .proposal-box {
       position: relative;
       width: 100%;
@@ -174,7 +163,6 @@
       transform: translateX(-50%);
     }
 
-    /* Final Love Letter Container */
     .novel-container {
       background: rgba(20, 8, 15, 0.95);
       backdrop-filter: blur(20px);
@@ -201,7 +189,6 @@
     }
 
     .novel-container .highlight-quote {
-      font-family: 'Playfair Display', 'Mukta', serif;
       font-size: 1.3rem;
       color: #ff70a6;
       text-align: center;
@@ -216,14 +203,14 @@
 
   <div class="ui-layer">
     
-    <!-- Screen 1: Romantic Hook -->
+    <!-- Screen 1 -->
     <div class="screen active" id="scr-1">
       <h1>सुनो न... 💌🌹</h1>
       <p>सामान्य म्यासेज त जसले नि पठाउँछ, तर तिमी मेरो लागि धेरै खास छौ। साँचो कुरा सोध्नु अघि, आऊ हाम्रो रोमान्टिक जोडी कत्तिको मिल्छ चेक गरौँ!</p>
       <button class="btn" onclick="nextScr(2)">चेक गरौँ न त ✨</button>
     </div>
 
-    <!-- Screen 2: Vibe Check -->
+    <!-- Screen 2 -->
     <div class="screen" id="scr-2">
       <h1>चरण १: केमिस्ट्री चेक 🍷✨</h1>
       <p>हाम्रो जोडीलाई सबैभन्दा खास र विशेष के कुराले बनाउँछ?</p>
@@ -236,7 +223,7 @@
       <button class="btn" id="vibe-next-btn" style="display:none;" onclick="nextScr(3)">अब धड्कन मिलाऊँ 💖</button>
     </div>
 
-    <!-- Screen 3: Heartbeat Sync Mini-Game -->
+    <!-- Screen 3 -->
     <div class="screen" id="scr-3">
       <h1>चरण २: धड्कनको तालमेल ❤️‍🔥</h1>
       <p>अन्तिम प्रश्न सोध्नु अघि, हाम्रो धड्कन एउटै बनाउन यो बटनमा ५ पटक थिच।</p>
@@ -247,7 +234,7 @@
       <button class="btn" id="final-step-btn" style="display:none;" onclick="nextScr(4)">प्रश्न हेरौँ 🌹</button>
     </div>
 
-    <!-- Screen 4: The Ultimate Valentine Proposal -->
+    <!-- Screen 4 -->
     <div class="screen" id="scr-4">
       <h1>के तिमी मेरो भ्यालेन्टाइन बन्छौ? 💍💘</h1>
       <p id="proposal-text">यो प्रश्नको एउटा मात्र सही उत्तर छ। विचार गरेर छनोट गर है!</p>
@@ -257,7 +244,7 @@
       </div>
     </div>
 
-    <!-- Screen 5: Love Letter Finale -->
+    <!-- Screen 5 -->
     <div class="screen" id="scr-5">
       <div class="novel-container">
         <h1>तिमी सधैँका लागि मेरो भ्यालेन्टाइन हौ। 🥂✨</h1>
@@ -310,7 +297,6 @@
       document.getElementById('scr-1').classList.add('active');
     }
 
-    // Vibe selection logic
     function selectVibe(el) {
       document.querySelectorAll('.vibe-opt').forEach(b => b.classList.remove('selected'));
       el.classList.add('selected');
@@ -318,7 +304,6 @@
       burstConfetti();
     }
 
-    // Heart sync mini game logic
     let heartCount = 0;
     function handleHeartSync() {
       heartCount++;
@@ -335,7 +320,6 @@
       }
     }
 
-    // Evasive 'No' Button Logic
     const noTaunts = [
       "राम्रो प्रयास! तर यो बटनले काम गर्दैन 😌",
       "गलत छनोट भयो नि, अर्को थिच न 💕",
@@ -359,7 +343,6 @@
       tauntIdx++;
     }
 
-    // Canvas Particle System
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
     let particles = [];
